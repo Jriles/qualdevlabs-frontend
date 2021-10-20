@@ -40,7 +40,7 @@ class ContactForm extends React.Component {
 
         console.log(this.state.email);
         axios({
-            url: "http://localhost:5555/",
+            url: "https://us-central1-spacepirates.cloudfunctions.net/sendEmail",
             method: 'post',
             data: {
                 email: this.state.email,
