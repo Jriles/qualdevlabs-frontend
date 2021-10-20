@@ -4,6 +4,7 @@ import LandingPageSection from "../components/landingPageSection";
 import TextLoop from "react-text-loop";
 import image from '../assets/tech-debt-image.jpg';
 import seattleImg from '../assets/seattle.jpg';
+import ContactForm from "../components/contactForm";
 
 class Home extends React.Component {
     render() { 
@@ -34,6 +35,7 @@ class Home extends React.Component {
             <LandingPageSection image={image} header="Scale with Ease" text="Never worry about your IP falling into the wrong hands. Our team is 100% on shore and always will be."/>
             <LandingPageSection image={image} header="Secure Solutions" text="Never worry about your IP falling into the wrong hands. Our team is 100% on shore and always will be."/>
             <LandingPageSection image={image} header="Reliable" text="Never worry about your IP falling into the wrong hands. Our team is 100% on shore and always will be."/>
+            <ContactForm/>
         </div>;
     }
 }

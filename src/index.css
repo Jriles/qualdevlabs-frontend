@@ -68,3 +68,20 @@ body {
 .landing-section-buffer {
   margin-top: 200px;
 }
+
+.form-spacing{
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+.dark-modal {
+  background-color: #212529 !important;
+}
+
+.dark-modal-border {
+  border: 2px solid white !important;
+}
+
+.visible-modal {
+  display: initial !important;
+}
