@@ -29,8 +29,6 @@ class ContactForm extends React.Component {
     async submitForm(event)
     {
         event.preventDefault();
-        //this.props.history.push("/home");
-        //const res = axios.post("https://us-central1-spacepirates.cloudfunctions.net/sendEmail",
         
         const config = {
             headers: {
@@ -48,8 +46,8 @@ class ContactForm extends React.Component {
             },
             config
         });
-        //console.log(res);
-        //display onsubmit message
+        
+        //show message sent modal
         this.setState({modalHidden: false});
     }
 
