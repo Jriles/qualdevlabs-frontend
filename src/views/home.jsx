@@ -9,13 +9,14 @@ import ContactForm from "../components/contactForm";
 class Home extends React.Component {
     constructor(props) {
         super(props);
-        this.formRef = React.createRef();
+        this.firstSectionRef = React.createRef();
     }
 
-    handleScrollToForm ()
+    handleScrollToFirstSection ()
     {
-        this.formRef.current.scrollIntoView({
-            behavior: 'smooth'
+        this.firstSectionRef.current.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
         });
     }
 
@@ -33,7 +34,7 @@ class Home extends React.Component {
         
         return <div>
             {/* landing video */}
-            <div className="ratio ratio-16x9">
+            <div className="ratio hero-video">
                 <video muted autoPlay loop>
                     <source src={landingVid} type="video/mp4" />
                     Not supported
@@ -43,20 +44,24 @@ class Home extends React.Component {
                         <TextLoop className="" interval="4000">
                             <h1 className="hero-cta-text">Design</h1>
                             <h1 className="hero-cta-text">Build</h1>
+                            <h1 className="hero-cta-text">Test</h1>
                             <h1 className="hero-cta-text">Deploy</h1>
                             <h1 className="hero-cta-text">Delight</h1>
                         </TextLoop>{" "}
                     </div>
                     <div className="d-flex flex-row justify-content-center">
-                        <button type="button" onClick={(event) => this.handleScrollToForm(event)} className="btn btn-success align-self-center text-white hero-btn">Get Started</button>
+                        <button type="button" onClick={(event) => this.handleScrollToFirstSection(event)} className="btn btn-primary align-self-center text-white hero-btn">Learn More</button>
                     </div>
                 </div>
             </div>
             {/* landing page sections */}
+            <div ref={this.firstSectionRef}>
+                <LandingPageSection  image={image} header={scaleHeader} text={scaleText}/>
+            </div>
+            
             <LandingPageSection image={seattleImg} header={outsourcingHeader} text={outsourcingText}/>
-            <LandingPageSection image={image} header={scaleHeader} text={scaleText}/>
             <LandingPageSection image={image} header={securityHeader} text={securityText}/>
-            <div ref={this.formRef}>
+            <div id="contact-form">
                 <ContactForm />
             </div>
         </div>;

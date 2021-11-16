@@ -5,8 +5,8 @@ class LandingPageSection extends React.Component {
         return <div className="px-5 container-fluid landing-section-buffer">
                 <div className="row gx-5"> 
                     <div className="col-6 mt-4 text-white">
-                        <h3 className="section-header">{this.props.header}</h3>
-                        <p className="mt-4">{this.props.text}</p>
+                        <h2 className="section-header">{this.props.header}</h2>
+                        <p className="mt-4 section-text">{this.props.text}</p>
                     </div>
                     <img className="col" src={this.props.image}/>
                 </div>

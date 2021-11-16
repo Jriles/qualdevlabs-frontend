@@ -1,13 +1,13 @@
 body {
   margin: 0;
   background-color: #212529 !important;
-  font-family: brawler !important;
+  font-family: latoLight !important;
 }
 
 @font-face {
-  font-family: brawler;
+  font-family: latoLight;
   /* src:  local('Ramaraja-Regular'), url(assets/fonts/Ramaraja-Regular.woff) format('woff'); */
-  src: local('Brawler-Regular'), url(assets/fonts/Brawler-Regular.woff) format('woff');
+  src: local('Lato-Light'), url(assets/fonts/Lato-Light.ttf) format('woff');
 }
 
 /* code {
@@ -59,10 +59,21 @@ body {
 
 .hero-btn {
   height: 50px;
+  width: 15%;
+  font-size: 20px !important;
+}
+
+.hero-video {
+  --bs-aspect-ratio: 63%;
+  margin-top: 70px;
 }
 
 .section-header {
   top: 100px;
+}
+
+.section-text {
+  font-size: 20px;
 }
 
 .landing-section-buffer {

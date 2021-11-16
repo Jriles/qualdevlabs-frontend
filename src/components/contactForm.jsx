@@ -38,7 +38,7 @@ class ContactForm extends React.Component {
 
         console.log(this.state.email);
         axios({
-            url: "https://us-central1-spacepirates.cloudfunctions.net/sendEmail",
+            url: "https://us-central1-qualdevlabsconsulting.cloudfunctions.net/sendEmail",
             method: 'post',
             data: {
                 email: this.state.email,
@@ -86,7 +86,7 @@ class ContactForm extends React.Component {
                         <textarea rows="4" className="form-control" id="exampleInputPassword1" onChange={(event) => this.handleNoteChange(event)}>{this.state.note}</textarea>
                     </div>
                     
-                    <FlexRow><button type="submit" className="btn btn-lg btn-success mt-4">Submit</button></FlexRow>
+                    <FlexRow><button type="submit" className="btn btn-lg btn-success mt-4 text-white hero-btn">Submit</button></FlexRow>
                 </form>
             </div>
         );
