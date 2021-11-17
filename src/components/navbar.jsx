@@ -25,7 +25,7 @@ class NavBar extends React.Component {
                 <Navbar bg="dark" expand="lg" variant="dark" fixed="top">
                 <Container fluid>
                     <Navbar.Brand>
-                        <Link className="navbar-brand ms-3 fs-4" to="/home">QualDevLabs</Link>
+                        <Link className="navbar-brand ms-3 fs-4" to="/">QualDevLabs</Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
@@ -38,7 +38,7 @@ class NavBar extends React.Component {
                             <NavDropdown.Item className="fs-5">Google Cloud</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
-                    <HashLink to="/home#contact-form">
+                    <HashLink to="/#contact-form">
                         <Button className="text-white btn-success btn-lg">
                             Contact Us
                         </Button>
@@ -47,7 +47,7 @@ class NavBar extends React.Component {
                 </Container>
                 </Navbar>
                 <Switch>
-                    <Route path="/home">
+                    <Route path="/">
                         <Home/>
                     </Route>
                     <Route path="/blog/tech-and-your-business">
