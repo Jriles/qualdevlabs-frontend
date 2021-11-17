@@ -8,41 +8,44 @@ import {
 import TechForBusiness from "../views/techForBiz";
 import GoogleCloud from "../views/googleCloud";
 import Home from '../views/home';
-import { HashLink } from 'react-router-hash-link';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
+import Button from 'react-bootstrap/Button';
+import { HashLink } from "react-router-hash-link";
 
 class NavBar extends React.Component {
 
-    render() { 
+    render() {
         return (
             <Router>
-                <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ml-5">
-                    <div class="container-fluid">
-                        <Link className="navbar-brand ms-3" to="/home">QualDevLabs</Link>
-                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse " id="navbarNav">
-                            <ul className="navbar-nav">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Blog
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                        <li>
-                                            <Link to="/blog/tech-and-your-business" className="nav-link text-white">Tech and Your Business</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/blog/google-cloud" className="nav-link text-white">Google Cloud</Link>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <HashLink to="/home#contact-form" className="nav-link text-white">
-                            <button type="button" className="btn btn-success text-white">Contact Us</button>
-                        </HashLink>
-                    </div>
-                </nav>
+                <Navbar bg="dark" expand="lg" variant="dark" fixed="top">
+                <Container fluid>
+                    <Navbar.Brand>
+                        <Link className="navbar-brand ms-3 fs-4" to="/home">QualDevLabs</Link>
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="navbarScroll" />
+                    <Navbar.Collapse id="navbarScroll">
+                    <Nav
+                        className="me-auto my-2 my-lg-0"
+                        navbarScroll
+                    >
+                        <NavDropdown className="fs-5" title="Blog" id="navbarScrollingDropdown" active menuVariant="dark" >
+                            <NavDropdown.Item className="fs-5">Tech and Your Business</NavDropdown.Item>
+                            <NavDropdown.Item className="fs-5">Google Cloud</NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
+                    <HashLink to="/home#contact-form">
+                        <Button className="text-white btn-success btn-lg">
+                            Contact Us
+                        </Button>
+                    </HashLink>
+                    </Navbar.Collapse>
+                </Container>
+                </Navbar>
                 <Switch>
                     <Route path="/home">
                         <Home/>
@@ -53,18 +56,6 @@ class NavBar extends React.Component {
                     <Route path="/blog/google-cloud">
                         <GoogleCloud/>
                     </Route>
-                    {/* <Route path="/download">
-                        <Download />
-                    </Route>
-                    <Route path="/login">
-                        <Login/>
-                    </Route>
-                    <Route path={"/skins-dashboard"}>
-                        <SkinsDashboard/>
-                    </Route>
-                    <Route path={"/create-player-skin"}>
-                        <CreatePlayerSkin/>
-                    </Route> */}
                 </Switch>
             </Router>
         );

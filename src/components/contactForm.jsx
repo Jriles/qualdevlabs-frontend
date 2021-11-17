@@ -70,7 +70,7 @@ class ContactForm extends React.Component {
                 <FlexRow>
                     <h1 className="text-white mt-5 mb-4">Get in Touch</h1>
                 </FlexRow>
-                <form onSubmit={(event) => this.submitForm(event)} className="w-50 mx-auto">
+                <form onSubmit={(event) => this.submitForm(event)} className="lg-form mx-auto px-4">
                     
                     <div className="form-group">
                         <FlexRow>

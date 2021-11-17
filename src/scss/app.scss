@@ -1,2 +1,81 @@
 @import "variables";
 @import "~bootstrap/scss/bootstrap";
+
+body {
+  margin: 0;
+  background-color: #212529 !important;
+  font-family: latoLight !important;
+}
+
+@font-face {
+  font-family: latoLight;
+  /* src:  local('Ramaraja-Regular'), url(assets/fonts/Ramaraja-Regular.woff) format('woff'); */
+  src: local('Lato-Light'), url(../assets/fonts/Lato-Light.ttf) format('woff');
+}
+
+.hero-video {
+    --bs-aspect-ratio: 63%;
+    // margin-top: 70px;
+}
+
+.hero-content {
+    top: 35% !important;
+    height: 200px !important;
+}
+
+.section-header {
+    top: 100px;
+}
+
+.section-text {
+    font-size: 20px;
+}
+
+.landing-section-buffer {
+    margin-top: 200px;
+}
+
+.form-spacing{
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.btn:hover {
+    background: rgba(0,0,0,0) !important; 
+}
+
+.visible-modal {
+    display: initial !important;
+}
+
+.dark-modal {
+    background-color: #212529 !important;
+}
+
+.dark-modal-border {
+    border: 2px solid white !important;
+}
+
+@include media-breakpoint-up(lg) {
+    .hero-img {
+        max-height: 400px !important;
+    }
+
+    .hero-cta-text {
+        font-size: 60px;
+    }
+
+    .hero-loop {
+        width: 25%;
+    }
+
+    .hero-btn {
+        height: 50px;
+        width: 15%;
+        font-size: 20px !important;
+    }
+    
+    .lg-form {
+        width: 50%;
+    }
+}
