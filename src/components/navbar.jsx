@@ -16,6 +16,8 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import { HashLink } from "react-router-hash-link";
+import ReactPillarPage from "../views/ReactPillarPage";
+import CustomizeBootstrapReact from "../views/CustomizeBootstrapReact";
 
 class NavBar extends React.Component {
 
@@ -34,8 +36,11 @@ class NavBar extends React.Component {
                         navbarScroll
                     >
                         <NavDropdown className="fs-5" title="Blog" id="navbarScrollingDropdown" active menuVariant="dark" >
-                            <NavDropdown.Item className="fs-5">Tech and Your Business</NavDropdown.Item>
-                            <NavDropdown.Item className="fs-5">Google Cloud</NavDropdown.Item>
+                            <NavDropdown.Item className="fs-5">
+                                <Link to="/blog/react" className="text-white" style={{ textDecoration: 'none' }}>
+                                    React
+                                </Link>
+                            </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     <HashLink to="/#contact-form">
@@ -47,14 +52,14 @@ class NavBar extends React.Component {
                 </Container>
                 </Navbar>
                 <Switch>
-                    <Route path="/">
+                    <Route exact path="/">
                         <Home/>
                     </Route>
-                    <Route path="/blog/tech-and-your-business">
-                        <TechForBusiness/>
+                    <Route path="/blog/react">
+                        <ReactPillarPage/>
                     </Route>
-                    <Route path="/blog/google-cloud">
-                        <GoogleCloud/>
+                    <Route path="/blog/customize-bootstrap-react">
+                        <CustomizeBootstrapReact/>
                     </Route>
                 </Switch>
             </Router>

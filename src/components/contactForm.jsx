@@ -36,7 +36,6 @@ class ContactForm extends React.Component {
             }
         }
 
-        console.log(this.state.email);
         axios({
             url: "https://us-central1-qualdevlabsconsulting.cloudfunctions.net/sendEmail",
             method: 'post',
