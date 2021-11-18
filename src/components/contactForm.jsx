@@ -85,7 +85,7 @@ class ContactForm extends React.Component {
                         <textarea rows="4" className="form-control" id="exampleInputPassword1" onChange={(event) => this.handleNoteChange(event)}>{this.state.note}</textarea>
                     </div>
                     
-                    <FlexRow><button type="submit" className="btn btn-lg btn-success mt-4 text-white hero-btn">Submit</button></FlexRow>
+                    <FlexRow><button type="submit" className="btn btn-lg btn-success mt-4 text-white">Submit</button></FlexRow>
                 </form>
             </div>
         );
