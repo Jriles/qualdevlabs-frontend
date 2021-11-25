@@ -2,8 +2,9 @@ import React from "react";
 import landingVid from "../assets/QualDevLabsLanding.mov";
 import LandingPageSection from "../components/landingPageSection";
 import TextLoop from "react-text-loop";
-import image from '../assets/tech-debt-image.jpg';
-import seattleImg from '../assets/seattle.jpg';
+import securityImg from '../assets/security.png';
+import americaImg from '../assets/america2.png';
+import scaleImg from '../assets/scale.png';
 import ContactForm from "../components/contactForm";
 
 class Home extends React.Component {
@@ -56,11 +57,11 @@ class Home extends React.Component {
             </div>
             {/* landing page sections */}
             <div ref={this.firstSectionRef}>
-                <LandingPageSection  image={image} header={scaleHeader} text={scaleText}/>
+                <LandingPageSection  image={scaleImg} header={scaleHeader} text={scaleText}/>
             </div>
             
-            <LandingPageSection image={seattleImg} header={outsourcingHeader} text={outsourcingText}/>
-            <LandingPageSection image={image} header={securityHeader} text={securityText}/>
+            <LandingPageSection image={americaImg} header={outsourcingHeader} text={outsourcingText}/>
+            <LandingPageSection image={securityImg} header={securityHeader} text={securityText}/>
             <div id="contact-form">
                 <ContactForm />
             </div>

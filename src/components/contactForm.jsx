@@ -9,7 +9,6 @@ class ContactForm extends React.Component {
         note: "Note",
         modalHidden: true
     };
-    
 
     handleEmailChange(event)
     {
