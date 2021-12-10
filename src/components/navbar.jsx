@@ -52,7 +52,7 @@ class NavBar extends React.Component {
                             </NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Item className="fs-5">
-                            <Nav.Link href="/about" className="text-white">About Me</Nav.Link>
+                            <Nav.Link href="/about" className="text-white">About</Nav.Link>
                         </Nav.Item>
                     </Nav>
                     <HashLink to="/#contact-form">
