@@ -22,6 +22,7 @@ import CustomizeBootstrapReact from "../views/CustomizeBootstrapReact";
 import RouteChangeTracker from "./RouteChangeTracker";
 import ShopifyPillarPage from "../views/ShopifyPillarPage";
 import UploadProductsToShopify from "../views/UploadProductsToShopify";
+import AboutMe from "../views/AboutMe";
 
 class NavBar extends React.Component {
     render() {
@@ -50,6 +51,9 @@ class NavBar extends React.Component {
                                 </Link>
                             </NavDropdown.Item>
                         </NavDropdown>
+                        <Nav.Item className="fs-5">
+                            <Nav.Link href="/about" className="text-white">About Me</Nav.Link>
+                        </Nav.Item>
                     </Nav>
                     <HashLink to="/#contact-form">
                         <Button className="text-white btn-success btn-lg">
@@ -63,6 +67,9 @@ class NavBar extends React.Component {
                 <Switch>
                     <Route exact path="/">
                         <Home/>
+                    </Route>
+                    <Route exact path="/about">
+                        <AboutMe/>
                     </Route>
                     {/* react stuff */}
                     <Route exact path="/blog/react">
