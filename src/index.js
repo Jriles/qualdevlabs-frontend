@@ -5,8 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import './scss/app.scss';
-import ReactGA from 'react-ga';
-ReactGA.initialize('G-709V6GJR3F');
 
 ReactDOM.render(
   <React.StrictMode>

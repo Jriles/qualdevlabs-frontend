@@ -21,13 +21,13 @@ class PillarPage extends React.Component {
             list of articles
         */
         
-        return <div>
+        return <div style={{marginTop: 70}}>
             <div className="d-flex flex-row justify-content-center">
                 <h1 className="text-white">
                     {this.props.topic}
                 </h1>
             </div>
-            <div className="d-flex flex-row justify-content-center">
+            <div className="d-flex flex-row justify-content-center mt-5">
                 <img src={this.props.image} className="img-fluid hero-img"></img>
             </div>
             <div className="d-flex flex-row justify-content-center mt-5">

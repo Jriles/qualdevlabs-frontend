@@ -5,6 +5,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import ReactGA from 'react-ga4';
 import TechForBusiness from "../views/techForBiz";
 import GoogleCloud from "../views/googleCloud";
 import Home from '../views/home';
@@ -18,9 +19,11 @@ import Button from 'react-bootstrap/Button';
 import { HashLink } from "react-router-hash-link";
 import ReactPillarPage from "../views/ReactPillarPage";
 import CustomizeBootstrapReact from "../views/CustomizeBootstrapReact";
+import RouteChangeTracker from "./RouteChangeTracker";
+import ShopifyPillarPage from "../views/ShopifyPillarPage";
+import UploadProductsToShopify from "../views/UploadProductsToShopify";
 
 class NavBar extends React.Component {
-
     render() {
         return (
             <Router>
@@ -41,6 +44,11 @@ class NavBar extends React.Component {
                                     React
                                 </Link>
                             </NavDropdown.Item>
+                            <NavDropdown.Item className="fs-5">
+                                <Link to="/blog/shopify" className="text-white" style={{ textDecoration: 'none' }}>
+                                    Shopify
+                                </Link>
+                            </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     <HashLink to="/#contact-form">
@@ -50,16 +58,26 @@ class NavBar extends React.Component {
                     </HashLink>
                     </Navbar.Collapse>
                 </Container>
+                <RouteChangeTracker/>
                 </Navbar>
                 <Switch>
                     <Route exact path="/">
                         <Home/>
                     </Route>
-                    <Route path="/blog/react">
+                    {/* react stuff */}
+                    <Route exact path="/blog/react">
                         <ReactPillarPage/>
                     </Route>
-                    <Route path="/blog/customize-bootstrap-react">
+
+                    <Route exact path="/blog/react/customize-bootstrap-react">
                         <CustomizeBootstrapReact/>
+                    </Route>
+                    {/* shopify stuff */}
+                    <Route exact path="/blog/shopify">
+                        <ShopifyPillarPage/>
+                    </Route>
+                    <Route exact path="/blog/shopify/upload-products-from-csv">
+                        <UploadProductsToShopify/>
                     </Route>
                 </Switch>
             </Router>

@@ -10,19 +10,19 @@ import React from "react";
 //what is an erp
 //why is collecting data + and analyzing that data important
 //here is odoo, etc.
-import image from '../assets/react.png';
+import image from '../assets/shopify_brand_dark.png';
 
-class ReactPillarPage extends React.Component {
+class ShopifyPillarPage extends React.Component {
     render() {
         const articles = [
             {
-                title: "Customize Bootstrap in React",
-                path: "react/customize-bootstrap-react"
+                title: "Upload Products from CSV to Shopify",
+                path: "shopify/upload-products-from-csv"
             }
         ];
-        const topicName = "React";
+        const topicName = "Shopify";
         return <PillarPage topic={topicName} image={image} articles={articles}></PillarPage>;
     }
 }
  
-export default ReactPillarPage;
+export default ShopifyPillarPage;
