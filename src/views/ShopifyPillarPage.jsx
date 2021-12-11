@@ -18,6 +18,10 @@ class ShopifyPillarPage extends React.Component {
             {
                 title: "Upload Products from CSV to Shopify",
                 path: "shopify/upload-products-from-csv"
+            },
+            {
+                title: "Change your Bank Account",
+                path: "shopify/change-bank"
             }
         ];
         const topicName = "Shopify";

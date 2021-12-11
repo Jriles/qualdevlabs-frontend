@@ -9,7 +9,9 @@ class PillarPage extends React.Component {
     articleItems (articles) {
         //each article has a path and a title
         return articles.map((article) => 
-            <Link to={"/blog/" + article.path} className="text-white text-decoration-none"><h3>{article.title}</h3></Link>
+            <Link to={"/blog/" + article.path} className="text-white text-decoration-none">
+                <h3 className="mt-5">{article.title}</h3>
+            </Link>
         )
     }
 
@@ -30,8 +32,8 @@ class PillarPage extends React.Component {
             <div className="d-flex flex-row justify-content-center mt-5">
                 <img src={this.props.image} className="img-fluid hero-img"></img>
             </div>
-            <div className="d-flex flex-row justify-content-center mt-5">
-                <ul>
+            <div className="d-flex flex-row justify-content-center">
+                <ul className="text-center">
                     {this.articleItems(this.props.articles)}
                 </ul>
             </div>

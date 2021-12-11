@@ -23,6 +23,7 @@ import RouteChangeTracker from "./RouteChangeTracker";
 import ShopifyPillarPage from "../views/ShopifyPillarPage";
 import UploadProductsToShopify from "../views/UploadProductsToShopify";
 import AboutMe from "../views/AboutMe";
+import ChangeBankAccountShopify from "../views/ChangeBankAccountShopify";
 
 class NavBar extends React.Component {
     render() {
@@ -85,6 +86,9 @@ class NavBar extends React.Component {
                     </Route>
                     <Route exact path="/blog/shopify/upload-products-from-csv">
                         <UploadProductsToShopify/>
+                    </Route>
+                    <Route exact path="/blog/shopify/change-bank">
+                        <ChangeBankAccountShopify/>
                     </Route>
                 </Switch>
             </Router>

@@ -8,7 +8,7 @@ class AboutMe extends React.Component {
         return <div>
             <Article image={pfp} title="Hi there!" content={
                 <div className="text-white mb-5">
-                    <div className="d-flex align-center justify-content-center flex-row">
+                    <div className="d-flex text-center justify-content-center flex-row">
                         <p className="mt-5 w-50 fs-5 justify-content-center">
                             I go by Jack but my legal name is Alexander Riley.
                             I am a full-stack developer with a Bachelor of Science in Computer Science from the University of Puget Sound, a liberal arts school in Tacoma.
@@ -25,7 +25,7 @@ class AboutMe extends React.Component {
                             After all, if your team can’t understand the code that you’ve written, how are they supposed to build on it?
                         </p> 
                     </div>
-                    <div className="d-flex align-center justify-content-center flex-row">
+                    <div className="d-flex align-center justify-content-center flex-row mt-5">
                         <HashLink to="/#contact-form">
                             <button className="btn text-white btn-success btn-lg">
                             Get In Touch
