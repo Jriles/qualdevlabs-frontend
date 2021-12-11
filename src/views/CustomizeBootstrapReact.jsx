@@ -5,7 +5,7 @@ import React from "react";
 class CustomizeBootstrapReact extends React.Component {
     render() { 
         return <div>
-            <Article image={image} title="Customize Bootstrap in React" content={
+            <Article image={image} title="Customize Bootstrap in React" ctaMessage="Need more help?" content={
                 <div className="text-white align-center d-flex justify-content-center mb-5">
                     <p className="mt-5 fs-5 w-50">
                         First, open a console at the root of your react project.

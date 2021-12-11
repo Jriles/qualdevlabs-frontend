@@ -10,7 +10,7 @@ import bankAccountForm from '../assets/bank_account_form.png';
 class ChangeBankAccountShopify extends React.Component {
     render() { 
         return <div>
-            <Article image={image} title="Change your Bank Account in Shopify" content={
+            <Article image={image} title="Change your Bank Account in Shopify" ctaMessage="Need more help?"  content={
                 <div className="text-white mb-5">
                     <div className="d-flex align-center justify-content-center flex-row">
                         <p className="mt-5 w-50 fs-5">

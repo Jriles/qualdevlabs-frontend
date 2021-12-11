@@ -25,13 +25,6 @@ class AboutMe extends React.Component {
                             After all, if your team can’t understand the code that you’ve written, how are they supposed to build on it?
                         </p> 
                     </div>
-                    <div className="d-flex align-center justify-content-center flex-row mt-5">
-                        <HashLink to="/#contact-form">
-                            <button className="btn text-white btn-success btn-lg">
-                            Get In Touch
-                            </button>
-                        </HashLink>
-                    </div>
                 </div>
             }/>;
         </div>

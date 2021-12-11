@@ -1,4 +1,5 @@
 import React from "react";
+import CTA from "./cta";
 
 class Article extends React.Component {
     render() { 
@@ -14,6 +15,7 @@ class Article extends React.Component {
             <div>
                 {this.props.content}
             </div>
+            <CTA ctaMessage={this.props.ctaMessage}/>
         </div>;
     }
 }

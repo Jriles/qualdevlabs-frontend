@@ -10,7 +10,7 @@ import validateProductsPopup from '../assets/validate_products_popup.png';
 class UploadProductsToShopify extends React.Component {
     render() { 
         return <div>
-            <Article image={image} title="Upload Products to Shopify from CSV" content={
+            <Article image={image} title="Upload Products to Shopify from CSV" ctaMessage="Need more help?" content={
                 <div className="text-white mb-5">
                     <div className="d-flex align-center justify-content-center flex-row">
                         <p className="mt-5 w-50 fs-5">
@@ -32,8 +32,8 @@ class UploadProductsToShopify extends React.Component {
                     </div>
                     <div className="d-flex align-center justify-content-center flex-row">
                         <p className="mt-4 w-50 fs-5">
-                            Next, navigate to your store admin page and click on 
-                            products from the left menu bar.
+                            Next, navigate to your store admin page and click on the
+                            Products tab in the left menu bar.
                         </p>
                     </div>
                     <div className="d-flex flex-row justify-content-center mt-2">
