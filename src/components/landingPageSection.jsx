@@ -35,7 +35,7 @@ class LandingPageSection extends React.Component {
                     <p className="section-text">{this.props.text}</p>
                 </div>
                 <div className="row mt-5">
-                    <img className="col" src={this.props.image}/>
+                    <img className="col" src={this.props.image} alt={this.props.imgAlt}/>
                 </div>
             </div>;
         }
@@ -47,7 +47,7 @@ class LandingPageSection extends React.Component {
                         <h2 className="section-header">{this.props.header}</h2>
                         <p className="mt-4 section-text">{this.props.text}</p>
                     </div>
-                    <img className="col" src={this.props.image}/>
+                    <img className="col" src={this.props.image} alt={this.props.imgAlt}/>
                 </div>
             </div>
         }

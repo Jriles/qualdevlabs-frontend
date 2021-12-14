@@ -5,16 +5,11 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import ReactGA from 'react-ga4';
-import TechForBusiness from "../views/techForBiz";
-import GoogleCloud from "../views/googleCloud";
 import Home from '../views/home';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import { HashLink } from "react-router-hash-link";
 import ReactPillarPage from "../views/ReactPillarPage";
@@ -52,8 +47,8 @@ class NavBar extends React.Component {
                                 </Link>
                             </NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Item className="fs-5">
-                            <Nav.Link href="/about" className="text-white">About</Nav.Link>
+                        <Nav.Item className="fs-5 mt-2 ms-3">
+                            <Link to="/about" className="text-white" style={{ textDecoration: 'none' }}>About</Link>
                         </Nav.Item>
                     </Nav>
                     <HashLink to="/#contact-form">

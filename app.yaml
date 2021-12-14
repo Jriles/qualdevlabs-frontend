@@ -1,11 +1,18 @@
 env: standard
 runtime: nodejs16
+default_expiration: "30d"
 handlers:
   - url: /static
     static_dir: build/static
   - url: /(.*\.(json|ico|js))$
     static_files: build/\1
     upload: build/.*\.(json|ico|js)$
+  - url: /robots.txt
+    static_files: build/robots.txt
+    upload: build/robots.txt
+  - url: /sitemap.xml
+    static_files: build/sitemap.xml
+    upload: build/sitemap.xml
   - url: .*
     static_files: build/index.html
     upload: build/index.html

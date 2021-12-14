@@ -72,16 +72,16 @@ class ContactForm extends React.Component {
                     
                     <div className="form-group">
                         <FlexRow>
-                            <label className="text-white mb-3">Your Email</label>
+                            <label className="text-white mb-3" for="emailInput">Your Email</label>
                         </FlexRow>
-                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value={this.state.email} onChange={(event) => this.handleEmailChange(event)}/>
+                        <input type="email" className="form-control" id="emailInput" aria-describedby="emailHelp" value={this.state.email} onChange={(event) => this.handleEmailChange(event)}/>
                     </div>
                     
                     <div className="form-group mt-3">
                         <FlexRow>
-                            <label className="text-white mb-3">Anything You'd Like to Share</label>
+                            <label className="text-white mb-3" for="message">Anything You'd Like to Share</label>
                         </FlexRow>
-                        <textarea rows="4" className="form-control" id="exampleInputPassword1" onChange={(event) => this.handleNoteChange(event)}>{this.state.note}</textarea>
+                        <textarea rows="4" className="form-control" id="message" onChange={(event) => this.handleNoteChange(event)}>{this.state.note}</textarea>
                     </div>
                     
                     <FlexRow><button type="submit" className="btn btn-lg btn-success mt-4 text-white">Submit</button></FlexRow>

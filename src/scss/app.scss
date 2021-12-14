@@ -11,6 +11,7 @@ body {
   font-family: latoLight;
   /* src:  local('Ramaraja-Regular'), url(assets/fonts/Ramaraja-Regular.woff) format('woff'); */
   src: local('Lato-Light'), url(../assets/fonts/Lato-Light.ttf) format('woff');
+  font-display: swap;
 }
 
 .hero-video {

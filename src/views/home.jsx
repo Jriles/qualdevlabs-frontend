@@ -1,11 +1,13 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import landingVid from "../assets/QualDevLabsLanding.mov";
-import LandingPageSection from "../components/landingPageSection";
 import TextLoop from "react-text-loop";
 import securityImg from '../assets/security.png';
 import americaImg from '../assets/america2.png';
 import scaleImg from '../assets/scale.png';
-import ContactForm from "../components/contactForm";
+import Loading from "../components/loading";
+//import ContactForm from '../components/contactForm';
+const LandingPageSection = lazy(() => import('../components/landingPageSection'));
+const ContactForm = lazy(() => import('../components/contactForm'));
 
 class Home extends React.Component {
     constructor(props) {
@@ -56,15 +58,22 @@ class Home extends React.Component {
                 </div>
             </div>
             {/* landing page sections */}
-            <div ref={this.firstSectionRef}>
-                <LandingPageSection  image={scaleImg} header={scaleHeader} text={scaleText}/>
-            </div>
-            
-            <LandingPageSection image={americaImg} header={outsourcingHeader} text={outsourcingText}/>
-            <LandingPageSection image={securityImg} header={securityHeader} text={securityText}/>
-            <div id="contact-form">
-                <ContactForm />
-            </div>
+            <Suspense fallback={Loading}>
+                <div ref={this.firstSectionRef}>
+                    <LandingPageSection image={scaleImg} imgAlt="Trees, with tree growing above the canopy, representing scale." header={scaleHeader} text={scaleText}/>
+                </div>
+            </Suspense>
+            <Suspense fallback={Loading}>
+                <LandingPageSection image={americaImg} imgAlt="The American Flag." header={outsourcingHeader} text={outsourcingText}/>
+            </Suspense>
+            <Suspense fallback={Loading}>
+                <LandingPageSection image={securityImg} imgAlt="A lock, representing security." header={securityHeader} text={securityText}/>
+            </Suspense>
+            <Suspense fallback={Loading}>
+                <div id="contact-form">
+                    <ContactForm />
+                </div>
+            </Suspense>
         </div>;
     }
 }
